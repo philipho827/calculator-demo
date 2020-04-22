@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "pawpawaks"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "pawpawaks"
+    spec:
+      containers:
+        - name: "pawpawaks"
+          image: "pawacr.azurecr.io/pawpawaks"
+          ports:
+          - containerPort: 3000
